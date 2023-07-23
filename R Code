@@ -1,10 +1,10 @@
 # This code chunk would identify my working directory and set it to where I want to save and fetch files
-# However, as we use GitHub to post our code, these functions are not relevant since the pathway on my computer is not compatible with GitHub folders system.
+# However, as we use GitHub to post and share our code, these functions are not relevant since file pathway on my computer is not compatible with GitHub folders system.
 # getwd()
 # setwd()
-# This brings the 'Titanic' data into my environment from Base R (Run this)
+# This brings the 'Titanic' data into my environment from Base R and I "Run" thi line to action this.
 data(Titanic)
-# This code saves the Titanic data as a dataframe with a new name
+# This code saves the Titanic data as a dataframe with a new name with reference to my name as suggested.
 OlegTitanic <- as.data.frame(Titanic)
 # This code chunk allows me to see the top 2 rows of my data
 head(OlegTitanic, 2)
@@ -13,7 +13,7 @@ str(OlegTitanic)
 # This code chunk shows me some basic summary stats
 summary(OlegTitanic)
 # This allows me to save one column as its own object ('values' in the Environment)
-# The Titanic dataset actually consists of variables Class, Sex, Age, Survived, Freq
+# The Titanic dataset consists of variables Class, Sex, Age, Survived, Freq
 # Let's save 'Sex' and 'Age' as objects
 Sex <- OlegTitanic$Sex
 Age <- OlegTitanic$Age
@@ -31,7 +31,7 @@ dim(OlegTitanic)
 install.packages("ggplot2")
 # This code calls the ggplot2 package so I can use its functions after I "Run" this line in R
 library(ggplot2)
-# This code creates a bar chart of the number of passengers that survived and did not survive (2 bars)
+# This code creates a bar chart of the number of passengers that survived and did not survive
 # with 'Survived' on x-axis and 'Freq' on y-axis. I can now see the plot in the right pane of R Studio.
 ggplot(OlegTitanic, aes(Survived, Freq)) + geom_col()
 # this completes Week 3 assignment in ANA 505 course.
