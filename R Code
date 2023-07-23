@@ -2,7 +2,7 @@
 # However, as we use GitHub to post and share our code, these functions are not relevant since file pathway on my computer is not compatible with GitHub folders system.
 # getwd()
 # setwd()
-# This brings the 'Titanic' data into my environment from Base R and I "Run" thi line to action this.
+# This brings the 'Titanic' data into my environment from Base R and I "Run" this line to action this.
 data(Titanic)
 # This code saves the Titanic data as a dataframe with a new name with reference to my name as suggested.
 OlegTitanic <- as.data.frame(Titanic)
