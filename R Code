@@ -1,0 +1,36 @@
+# This code chunk identifies my working directory and sets it to where I want to save and fetch files
+# However, as we use GitHub to post our code, these functions are not relevant since the pathway on my computer is not compatible with GitHub folders system.
+# getwd()
+# setwd()
+# This brings the 'Titanic' data into my environment from Base R (Run this)
+data(Titanic)
+# This code saves the Titanic data as a dataframe with a new name
+OlegTitanic <- as.data.frame(Titanic)
+# This code chunk allows me to see the top 2 rows of my data
+head(OlegTitanic, 2)
+# This code chunk shows me the internal structure
+str(OlegTitanic)
+# This code chunk shows me some basic summary stats
+summary(OlegTitanic)
+# This allows me to save one column as its own object ('values' in the Environment)
+# The Titanic dataset actually consists of variables Class, Sex, Age, Survived, Freq
+# Let's save 'Sex' and 'Age' as objects
+Sex <- OlegTitanic$Sex
+Age <- OlegTitanic$Age
+# This takes the individual objects ('values' in the Environment) and creates a dataframe
+SexAgeDF <- data.frame(Sex, Age)
+# This code chunk creates a subset from my dataset
+subset_freq_gt_25 <- subset(OlegTitanic, Freq > 25)
+# This shows me how many rows are in my dataset
+nrow(OlegTitanic)
+# This shows me how many columns are in my dataset
+ncol(OlegTitanic)
+# This also shows me how many rows and columns with just one command
+dim(OlegTitanic)
+# This code will install the ggplot2 package
+install.packages("ggplot2")
+# This code calls the ggplot2 package so I can use its functions
+library(ggplot2)
+# This code creates a bar chart of the number of passengers that survived and did not survive (2 bars)
+# with 'Survived' on x-axis and 'Freq' on y-axis.
+ggplot(OlegTitanic, aes(Survived, Freq)) + geom_col()
