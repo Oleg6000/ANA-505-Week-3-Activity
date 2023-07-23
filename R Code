@@ -1,4 +1,4 @@
-# This code chunk identifies my working directory and sets it to where I want to save and fetch files
+# This code chunk would identify my working directory and set it to where I want to save and fetch files
 # However, as we use GitHub to post our code, these functions are not relevant since the pathway on my computer is not compatible with GitHub folders system.
 # getwd()
 # setwd()
@@ -27,10 +27,11 @@ nrow(OlegTitanic)
 ncol(OlegTitanic)
 # This also shows me how many rows and columns with just one command
 dim(OlegTitanic)
-# This code will install the ggplot2 package
+# This code will install the ggplot2 package after I "Run" this line in R
 install.packages("ggplot2")
-# This code calls the ggplot2 package so I can use its functions
+# This code calls the ggplot2 package so I can use its functions after I "Run" this line in R
 library(ggplot2)
 # This code creates a bar chart of the number of passengers that survived and did not survive (2 bars)
-# with 'Survived' on x-axis and 'Freq' on y-axis.
+# with 'Survived' on x-axis and 'Freq' on y-axis. I can now see the plot in the right pane of R Studio.
 ggplot(OlegTitanic, aes(Survived, Freq)) + geom_col()
+# this completes Week 3 assignment in ANA 505 course.
